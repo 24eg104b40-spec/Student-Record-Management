@@ -7,17 +7,11 @@ Simple React and Spring Boot CRUD application for managing college student recor
 - Java 17 or later
 - Maven
 - Node.js and npm
-- MySQL
+- No separate database installation is required; the backend uses H2.
 
-## MySQL setup
+## Database setup
 
-Create the database in MySQL:
-
-```sql
-CREATE DATABASE student_db;
-```
-
-Open `backend/src/main/resources/application.properties` and replace `YOUR_USERNAME` and `YOUR_PASSWORD` with your local MySQL credentials. Hibernate creates or updates the `students` table automatically.
+The backend uses a file-backed H2 database stored in `backend/data/`, so no database server, username, or password configuration is required. Hibernate creates or updates the `students` table automatically. The database files are created after the backend starts and are ignored by Git.
 
 ## Start the backend
 
