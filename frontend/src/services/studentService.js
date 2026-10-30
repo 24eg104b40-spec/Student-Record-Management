@@ -2,9 +2,6 @@ import axios from 'axios'
 
 const api = axios.create({
   baseURL: 'http://localhost:8080/api/students',
-  headers: {
-    'Content-Type': 'application/json',
-  },
 })
 
 export const getStudents = () => api.get('/')
